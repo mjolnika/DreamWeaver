@@ -15,6 +15,8 @@ public class PlayerController : MonoBehaviour
 
     public Rigidbody2D rb;
 
+    [SerializeField] private TimerScript time;
+
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -33,7 +35,7 @@ public class PlayerController : MonoBehaviour
 
         if (other.gameObject.tag == "Collectable")
         {
-            //ingameAudioSource.PlayOneShot(collectSound);
+            time.TimeLeft += 5;//ingameAudioSource.PlayOneShot(collectSound);
             counter++;
             Destroy(other.gameObject);
         }
