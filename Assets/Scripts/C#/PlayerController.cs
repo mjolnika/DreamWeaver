@@ -16,6 +16,7 @@ public class PlayerController : MonoBehaviour
     public Rigidbody2D rb;
 
     [SerializeField] private TimerScript time;
+    [SerializeField] private LogicManager logic;
 
     private void Start()
     {
@@ -39,11 +40,10 @@ public class PlayerController : MonoBehaviour
             counter++;
             Destroy(other.gameObject);
         }
-      //  else if (other.gameObject.tag == "Trigger")
-        //{ 
-            // проверка все true (puzzle)
-            // если все true destroy barrier ()
-        //}
+        else if (other.gameObject.tag == "Finish")
+        { 
+            logic.nextLevel();
+        }
         //{ Debug.Log(other.gameObject.GetType()); }
         //{ //sound
           //destroy object2 ? array?}
