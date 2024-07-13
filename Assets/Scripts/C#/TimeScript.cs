@@ -24,7 +24,7 @@ public class TimerScript : MonoBehaviour
             }
             else
             {
-                Debug.Log("Time is UP!");
+                // endscreen.SetActive(true); endscreen = restart button + textwords
                 TimeLeft = 0;
                 TimerOn = false;
             }

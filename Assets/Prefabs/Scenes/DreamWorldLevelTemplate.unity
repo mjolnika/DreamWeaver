@@ -267,6 +267,11 @@ Transform:
   - {fileID: 1169126920}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &419604076 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4046542806056603742, guid: 75d1137dcfcff2740b69bf013ce8d5b1, type: 3}
+  m_PrefabInstance: {fileID: 5223936150866893681}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &474550646
 GameObject:
   m_ObjectHideFlags: 0
@@ -831,6 +836,55 @@ Rigidbody2D:
   m_CorrespondingSourceObject: {fileID: 2570374726638964600, guid: 75d1137dcfcff2740b69bf013ce8d5b1, type: 3}
   m_PrefabInstance: {fileID: 5223936150866893681}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1605435035
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 419604076}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5cb77ef77d0701c428b552d3b2632f78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_JumpForce: 400
+  m_CrouchSpeed: 0.36
+  m_MovementSmoothing: 0.05
+  m_AirControl: 0
+  m_WhatIsGround:
+    serializedVersion: 2
+    m_Bits: 0
+  m_GroundCheck: {fileID: 0}
+  m_CeilingCheck: {fileID: 0}
+  m_CrouchDisableCollider: {fileID: 0}
+  OnLandEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  OnCrouchEvent:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!95 &1605435036
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 419604076}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f1bf16b408705a84ba5e296f03b4829b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!114 &1843338777 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7883414930223326006, guid: 2575129e9844d5c4ea6531f2fa985018, type: 3}
@@ -1540,6 +1594,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2049999645}
     - target: {fileID: 1764387118612371941, guid: 75d1137dcfcff2740b69bf013ce8d5b1, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1764387118612371941, guid: 75d1137dcfcff2740b69bf013ce8d5b1, type: 3}
       propertyPath: collectSound
       value: 
       objectReference: {fileID: 8300000, guid: 173a14cf06354c643b46b235f2a4f974, type: 3}
@@ -1587,10 +1645,20 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 4046542806056603742, guid: 75d1137dcfcff2740b69bf013ce8d5b1, type: 3}
+      propertyPath: m_Layer
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4046542806056603742, guid: 75d1137dcfcff2740b69bf013ce8d5b1, type: 3}
+      insertIndex: 3
+      addedObject: {fileID: 1605435035}
+    - targetCorrespondingSourceObject: {fileID: 4046542806056603742, guid: 75d1137dcfcff2740b69bf013ce8d5b1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1605435036}
   m_SourcePrefab: {fileID: 100100000, guid: 75d1137dcfcff2740b69bf013ce8d5b1, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
