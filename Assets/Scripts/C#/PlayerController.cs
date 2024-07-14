@@ -36,8 +36,7 @@ public class PlayerController : MonoBehaviour
 
         if (other.gameObject.tag == "Collectable")
         {
-            time.TimeLeft += 5;
-            ingameAudioSource.PlayOneShot(collectSound);
+            time.TimeLeft += 5;//ingameAudioSource.PlayOneShot(collectSound);
             counter++;
             Destroy(other.gameObject);
         }
