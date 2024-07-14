@@ -12,6 +12,7 @@ public class PlayerController : MonoBehaviour
 
     private AudioSource ingameAudioSource;
     [SerializeField] private AudioClip collectSound;
+    bool facingRight = true;
 
     public Rigidbody2D rb;
 
@@ -26,14 +27,36 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
-        speedX = Input.GetAxisRaw("Horizontal") * speed;
-        speedY = Input.GetAxisRaw("Vertical") * speed;
-        rb.velocity = new Vector2(speedX, speedY);
+        speedX = Input.GetAxisRaw("Horizontal");
+        speedY = Input.GetAxisRaw("Vertical");
+
+        rb.velocity = new Vector2(speedX * speed, speedY * speed);
+        
+
+        if (speedX > 0 && !facingRight)
+        {
+            Flip();
+        }
+        else if (speedX < 0 && facingRight)
+        {
+            Flip();
+        }
+
+        // rb.velocity = new Vector2(speedX, speedY);
+    }
+
+    void Flip()
+    {
+        Vector3 currentScale = gameObject.transform.localScale;
+        currentScale.x *= -1;
+        gameObject.transform.localScale = currentScale;
+
+        facingRight = !facingRight;
     }
 
     public void OnTriggerEnter2D(Collider2D other)
     {
-
+        print(other);
         if (other.gameObject.tag == "Collectable")
         {
             time.TimeLeft += 5;
