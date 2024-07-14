@@ -6,8 +6,8 @@ public class PlayerController : MonoBehaviour
 {
     public float speed = 10.5f;
     float speedX, speedY;
-   // private int status = 1;
-   // private float health = 0.5f;
+    // private int status = 1;
+    // private float health = 0.5f;
     public int counter = 0;
 
     private AudioSource ingameAudioSource;
@@ -18,6 +18,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private TimerScript time;
     [SerializeField] private LogicManager logic;
 
+    bool facingRight = true;
+
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -26,9 +28,33 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
-        speedX = Input.GetAxisRaw("Horizontal") * speed;
-        speedY = Input.GetAxisRaw("Vertical") * speed;
-        rb.velocity = new Vector2(speedX, speedY);
+        speedX = Input.GetAxisRaw("Horizontal");
+        speedY = Input.GetAxisRaw("Vertical");
+
+        if (speedX != 0)
+        {
+            rb.velocity = new Vector2(speedX, speedY);
+        }
+
+        if (speedX > 0)
+        {
+            Flip();
+        }
+        else if (speedX < 0)
+        {
+            Flip();
+        }
+
+        // rb.velocity = new Vector2(speedX, speedY);
+    }
+
+    void Flip()
+    {
+        Vector3 currentScale = gameObject.transform.localScale;
+        currentScale.x *= -1;
+        gameObject.transform.localScale = currentScale;
+
+        facingRight = !facingRight;
     }
 
     public void OnTriggerEnter2D(Collider2D other)
