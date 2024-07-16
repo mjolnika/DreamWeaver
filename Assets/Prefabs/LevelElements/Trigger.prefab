@@ -100,6 +100,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   puzzleSolvedSound: {fileID: 8300000, guid: 2c65f54037bcf1b4eab534639ec6542a, type: 3}
+  buttonClickedSound: {fileID: 8300000, guid: 2b3a20788d567194b8d5a797fabf687d, type: 3}
   puzzle: {fileID: 0}
 --- !u!60 &1152936597217309
 PolygonCollider2D:

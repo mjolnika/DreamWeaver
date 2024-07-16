@@ -32,7 +32,7 @@ public class PlayerController : MonoBehaviour
         speedY = Input.GetAxisRaw("Vertical");
 
         rb.velocity = new Vector2(speedX * speed, speedY * speed);
-        print(rb.velocity);
+        // print(rb.velocity);
         
 
         if (speedX > 0 && !facingRight)

@@ -7,6 +7,7 @@ public class Trigger : MonoBehaviour
     private AudioSource ingameAudioSource;
 
     [SerializeField] private AudioClip puzzleSolvedSound;
+    [SerializeField] private AudioClip buttonClickedSound;
     [SerializeField] public Puzzle puzzle;
     // Start is called before the first frame update
 
@@ -35,6 +36,10 @@ public class Trigger : MonoBehaviour
         if (allTriggered)
         {
             HideBarrier();
+        }
+        else
+        {
+            ingameAudioSource.PlayOneShot(buttonClickedSound);
         }
     }
     public void OnTriggerStay2D(Collider2D other) // UPDATE: add animation to tiggers
