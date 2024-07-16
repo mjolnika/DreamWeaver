@@ -9,6 +9,7 @@ public class Trigger : MonoBehaviour
     [SerializeField] private AudioClip puzzleSolvedSound;
     [SerializeField] private AudioClip buttonClickedSound;
     [SerializeField] public Puzzle puzzle;
+
     // Start is called before the first frame update
 
     void Start()
@@ -20,7 +21,12 @@ public class Trigger : MonoBehaviour
     void  UpdateBarrier()
     {
         var index = puzzle.triggers.IndexOf(this);
-        puzzle.check[index] = true;
+        if (puzzle.check[index] == false)
+        {
+            puzzle.triggered++;
+            puzzle.check[index] = true;
+        }
+        
 
        // var allTriggered = CheckTriggered();
         var allTriggered = true;
