@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -21,6 +22,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private TimerScript timer;
 
     public GameObject gameFailScreen;
+    public string toMenu;
 
     private void Start()
     {
@@ -51,6 +53,10 @@ public class PlayerController : MonoBehaviour
             gameFailScreen.SetActive(true);
         }
 
+        if (Input.GetKey("escape"))
+        {
+            SceneManager.LoadScene(toMenu);
+        }
     }
 
     void Flip()
