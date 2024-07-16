@@ -6,8 +6,7 @@ public class PlayerController : MonoBehaviour
 {
     public float speed = 10.5f;
     float speedX, speedY;
-   // private int status = 1;
-   // private float health = 0.5f;
+    private bool isRunning = true;
     public int counter = 0;
 
     private AudioSource ingameAudioSource;
@@ -28,20 +27,21 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
-        speedX = Input.GetAxisRaw("Horizontal");
-        speedY = Input.GetAxisRaw("Vertical");
-
-        rb.velocity = new Vector2(speedX * speed, speedY * speed);
-        // print(rb.velocity);
-        
-
-        if (speedX > 0 && !facingRight)
+        if (isRunning == true)
         {
-            Flip();
-        }
-        else if (speedX < 0 && facingRight)
-        {
-            Flip();
+            speedX = Input.GetAxisRaw("Horizontal");
+            speedY = Input.GetAxisRaw("Vertical");
+
+            rb.velocity = new Vector2(speedX * speed, speedY * speed);
+
+            if (speedX > 0 && !facingRight)
+            {
+                Flip();
+            }
+            else if (speedX < 0 && facingRight)
+            {
+                Flip();
+            }
         }
 
     }
@@ -57,7 +57,6 @@ public class PlayerController : MonoBehaviour
 
     public void OnTriggerEnter2D(Collider2D other)
     {
-        print(other);
         if (other.gameObject.tag == "Collectable")
         {
             time.TimeLeft += 5;
