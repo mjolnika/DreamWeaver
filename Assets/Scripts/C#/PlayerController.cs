@@ -20,6 +20,8 @@ public class PlayerController : MonoBehaviour
 
     [SerializeField] private TimerScript timer;
 
+    public GameObject gameFailScreen;
+
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -43,6 +45,10 @@ public class PlayerController : MonoBehaviour
             {
                 Flip();
             }
+        }
+        else
+        {
+            gameFailScreen.SetActive(true);
         }
 
     }
