@@ -42,10 +42,7 @@ public class Trigger : MonoBehaviour
 
         if (other.gameObject.tag == "Player")
         {
-            if (Input.GetKey(KeyCode.Space))
-            {
-                UpdateBarrier();
-            }
+            UpdateBarrier();
         }
     }
 

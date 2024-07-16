@@ -32,6 +32,7 @@ public class PlayerController : MonoBehaviour
         speedY = Input.GetAxisRaw("Vertical");
 
         rb.velocity = new Vector2(speedX * speed, speedY * speed);
+        print(rb.velocity);
         
 
         if (speedX > 0 && !facingRight)
@@ -43,7 +44,6 @@ public class PlayerController : MonoBehaviour
             Flip();
         }
 
-        // rb.velocity = new Vector2(speedX, speedY);
     }
 
     void Flip()
@@ -70,36 +70,6 @@ public class PlayerController : MonoBehaviour
             logic.nextLevel();
             ingameAudioSource.PlayOneShot(portalSound);
         }
-        //{ Debug.Log(other.gameObject.GetType()); }
-        //{ //sound
-          //destroy object2 ? array?}
 
     }
 }
-
-    // Update is called once per frame
-    //void Update()
-    //{
-    // velocity=speed, velocity vector // gooogle it
-    //  Vector3 pos = transform.position;
-
-//if (Input.GetKey(KeyCode.W) | Input.GetKey(KeyCode.UpArrow))
-//{
-//pos.y += speed * Time.deltaTime;
-//  rb.velocity = new Vector3(0, 10, 0);
-// }
-// if (Input.GetKey(KeyCode.S) | Input.GetKey(KeyCode.DownArrow))
-//  {
-//    pos.y -= speed * Time.deltaTime;
-// }
-// if (Input.GetKey(KeyCode.D) | Input.GetKey(KeyCode.RightArrow))
-//{
-//  pos.x += speed * Time.deltaTime;
-// }
-//if (Input.GetKey(KeyCode.A) | Input.GetKey(KeyCode.LeftArrow))
-//{
-//  pos.x -= speed * Time.deltaTime;
-//}
-
-// transform.position = pos;
-//}
