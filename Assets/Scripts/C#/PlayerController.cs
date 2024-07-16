@@ -6,7 +6,6 @@ public class PlayerController : MonoBehaviour
 {
     public float speed = 10.5f;
     float speedX, speedY;
-    private bool isRunning = true;
     public int counter = 0;
 
     private AudioSource ingameAudioSource;
@@ -19,6 +18,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private TimerScript time;
     [SerializeField] private LogicManager logic;
 
+    [SerializeField] private TimerScript timer;
+
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -27,7 +28,7 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
-        if (isRunning == true)
+        if (timer.TimerOn == true)
         {
             speedX = Input.GetAxisRaw("Horizontal");
             speedY = Input.GetAxisRaw("Vertical");
