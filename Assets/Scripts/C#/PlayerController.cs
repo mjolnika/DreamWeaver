@@ -12,6 +12,7 @@ public class PlayerController : MonoBehaviour
 
     private AudioSource ingameAudioSource;
     [SerializeField] private AudioClip collectSound;
+    [SerializeField] private AudioClip portalSound;
     bool facingRight = true;
 
     public Rigidbody2D rb;
@@ -67,6 +68,7 @@ public class PlayerController : MonoBehaviour
         else if (other.gameObject.tag == "Finish")
         { 
             logic.nextLevel();
+            ingameAudioSource.PlayOneShot(portalSound);
         }
         //{ Debug.Log(other.gameObject.GetType()); }
         //{ //sound

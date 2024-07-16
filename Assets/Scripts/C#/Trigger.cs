@@ -3,13 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Trigger : MonoBehaviour
+{ 
+    private AudioSource ingameAudioSource;
 
-{
+    [SerializeField] private AudioClip puzzleSolvedSound;
     [SerializeField] public Puzzle puzzle;
     // Start is called before the first frame update
+
     void Start()
     {
         puzzle.triggers.Add(this);
+        ingameAudioSource = GetComponent<AudioSource>();
     }
 
     void  UpdateBarrier()
@@ -47,6 +51,7 @@ public class Trigger : MonoBehaviour
 
     void HideBarrier()
     {
+        ingameAudioSource.PlayOneShot(puzzleSolvedSound);
         puzzle.gameObject.SetActive(false);
     }
     

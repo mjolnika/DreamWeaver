@@ -1722,9 +1722,21 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1764387118612371941, guid: 75d1137dcfcff2740b69bf013ce8d5b1, type: 3}
+      propertyPath: portalSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 2c65f54037bcf1b4eab534639ec6542a, type: 3}
+    - target: {fileID: 1764387118612371941, guid: 75d1137dcfcff2740b69bf013ce8d5b1, type: 3}
       propertyPath: collectSound
       value: 
-      objectReference: {fileID: 8300000, guid: 173a14cf06354c643b46b235f2a4f974, type: 3}
+      objectReference: {fileID: 8300000, guid: ac3d9b2f6f86d24428ac8103ffc17c74, type: 3}
+    - target: {fileID: 2809470629644037071, guid: 75d1137dcfcff2740b69bf013ce8d5b1, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: ac3d9b2f6f86d24428ac8103ffc17c74, type: 3}
+    - target: {fileID: 2809470629644037071, guid: 75d1137dcfcff2740b69bf013ce8d5b1, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3032884446054976501, guid: 75d1137dcfcff2740b69bf013ce8d5b1, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
