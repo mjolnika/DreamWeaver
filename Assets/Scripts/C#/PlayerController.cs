@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class PlayerController : MonoBehaviour
 {
     public float speed = 10.5f;
+    public float health = 5f;
     float speedX, speedY;
     public int counter = 0;
 
