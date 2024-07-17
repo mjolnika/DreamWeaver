@@ -18,4 +18,9 @@ public class LogicManager : MonoBehaviour
     {
         SceneManager.LoadScene(sceneName);
     }
+
+    public void exitGame()
+    {
+        Application.Quit();
+    }
 }

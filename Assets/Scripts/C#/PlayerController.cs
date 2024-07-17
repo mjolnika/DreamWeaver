@@ -1,13 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
     public float speed = 10.5f;
     float speedX, speedY;
-   // private int status = 1;
-   // private float health = 0.5f;
     public int counter = 0;
 
     private AudioSource ingameAudioSource;
@@ -20,6 +19,11 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private TimerScript time;
     [SerializeField] private LogicManager logic;
 
+    [SerializeField] private TimerScript timer;
+
+    public GameObject gameFailScreen;
+    public string toMenu;
+
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -28,22 +32,31 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
-        speedX = Input.GetAxisRaw("Horizontal");
-        speedY = Input.GetAxisRaw("Vertical");
-
-        rb.velocity = new Vector2(speedX * speed, speedY * speed);
-        // print(rb.velocity);
-        
-
-        if (speedX > 0 && !facingRight)
+        if (timer.TimerOn == true)
         {
-            Flip();
+            speedX = Input.GetAxisRaw("Horizontal");
+            speedY = Input.GetAxisRaw("Vertical");
+
+            rb.velocity = new Vector2(speedX * speed, speedY * speed);
+
+            if (speedX > 0 && !facingRight)
+            {
+                Flip();
+            }
+            else if (speedX < 0 && facingRight)
+            {
+                Flip();
+            }
         }
-        else if (speedX < 0 && facingRight)
+        else
         {
-            Flip();
+            gameFailScreen.SetActive(true);
         }
 
+        if (Input.GetKey("escape"))
+        {
+            SceneManager.LoadScene(toMenu);
+        }
     }
 
     void Flip()
@@ -57,7 +70,6 @@ public class PlayerController : MonoBehaviour
 
     public void OnTriggerEnter2D(Collider2D other)
     {
-        print(other);
         if (other.gameObject.tag == "Collectable")
         {
             time.TimeLeft += 5;

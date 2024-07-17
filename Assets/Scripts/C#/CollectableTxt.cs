@@ -1,18 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CollectableTxt : MonoBehaviour
 {
-    // Start is called before the first frame update
+    [SerializeField] public PlayerController player;
+    public Text collectableTxt;
+
     void Start()
     {
-        
     }
 
-    // Update is called once per frame
     void Update()
     {
-        
+        collectableTxt.text = string.Format("{0}", player.counter);
     }
+
 }
