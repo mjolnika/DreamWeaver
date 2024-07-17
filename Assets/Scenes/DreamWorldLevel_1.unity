@@ -2350,6 +2350,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CollectableCounter-text-object
       objectReference: {fileID: 0}
+    - target: {fileID: 6509866793153977154, guid: 8663296a1dce6124880a036b9a891d33, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
