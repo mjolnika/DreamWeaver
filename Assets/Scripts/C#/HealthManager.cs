@@ -6,11 +6,14 @@ using UnityEngine.UI;
 public class HealthBar : MonoBehaviour
 {
     public Image healthBar;
-    public float healthAmount = 5f;
-
-    public void gainDetermination(float determination)
+    
+    public void SetHealth(float current, float max = 100)
     {
-        healthAmount += determination;
-        healthBar.fillAmount = healthAmount / 100f;
+        healthBar.fillAmount = current / max;
+    }
+
+    public void SetAmount (float current, float max = 100)
+    {
+        healthBar.fillAmount = current / max;
     }
 }

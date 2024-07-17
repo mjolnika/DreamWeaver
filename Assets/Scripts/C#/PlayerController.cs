@@ -6,7 +6,8 @@ using UnityEngine.SceneManagement;
 public class PlayerController : MonoBehaviour
 {
     public float speed = 10.5f;
-    public float health = 5f;
+    public float health = 0f;
+    [SerializeField] private HealthBar healthBar;
     float speedX, speedY;
     public int counter = 0;
 
@@ -27,6 +28,7 @@ public class PlayerController : MonoBehaviour
 
     private void Start()
     {
+        healthBar.SetHealth(0);
         rb = GetComponent<Rigidbody2D>();
         ingameAudioSource = GetComponent<AudioSource>();
     }
@@ -74,6 +76,8 @@ public class PlayerController : MonoBehaviour
         if (other.gameObject.tag == "Collectable")
         {
             time.TimeLeft += 5;
+            health += 5;
+            healthBar.SetHealth(health);
             ingameAudioSource.PlayOneShot(collectSound);
             counter++;
             Destroy(other.gameObject);
