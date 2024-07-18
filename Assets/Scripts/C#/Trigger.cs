@@ -15,6 +15,7 @@ public class Trigger : MonoBehaviour
     void Start()
     {
         puzzle.triggers.Add(this);
+        puzzle.check.Add(false);
         ingameAudioSource = GetComponent<AudioSource>();
     }
 

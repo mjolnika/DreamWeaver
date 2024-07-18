@@ -11,10 +11,6 @@ public class Puzzle : MonoBehaviour
     
     void Start()
     {
-        foreach (Trigger trigger in triggers)
-        {
-            check.Add(false);
-        }
     }
 
     // Update is called once per frame
