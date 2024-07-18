@@ -322,8 +322,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7bd7c6c49029b5d42b005ec982686776, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName: DreamWorldLevel_2
-  toMenu: 
+  sceneName: DEATHSCREAM
+  toMenu: MainMenu
 --- !u!1 &1046695324
 GameObject:
   m_ObjectHideFlags: 0

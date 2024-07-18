@@ -1066,6 +1066,10 @@ PrefabInstance:
       value: SceneManager
       objectReference: {fileID: 0}
     - target: {fileID: 3222526651232793952, guid: 37e5ad38282a1624097c56d544f81d5d, type: 3}
+      propertyPath: sceneName
+      value: DEATHSCREAM
+      objectReference: {fileID: 0}
+    - target: {fileID: 3222526651232793952, guid: 37e5ad38282a1624097c56d544f81d5d, type: 3}
       propertyPath: myRigidbody
       value: 
       objectReference: {fileID: 1605435029}
