@@ -78,7 +78,8 @@ public class PlayerController : MonoBehaviour
             Destroy(other.gameObject);
         }
         else if (other.gameObject.tag == "Finish")
-        { 
+        {
+            print("AAAAAAAA");
             logic.nextLevel();
             ingameAudioSource.PlayOneShot(portalSound);
         }
