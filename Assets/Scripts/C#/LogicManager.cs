@@ -8,7 +8,6 @@ using UnityEngine.SceneManagement;
 public class LogicManager : MonoBehaviour
 {
     public string sceneName;
-    public CanvasGroup Fade;
 
     public void restartGame()
     {
@@ -17,7 +16,6 @@ public class LogicManager : MonoBehaviour
 
     public void nextLevel()
     {
-      //  StartCoroutine(FadeLevel());
         SceneManager.LoadScene(sceneName);
     }
 
@@ -25,13 +23,4 @@ public class LogicManager : MonoBehaviour
     {
         Application.Quit();
     }
-
-   // private IEnumerator FadeLevel()
-   //{
-      //  yield return FadeHelper.FadeIn(1f, Fade);
-
-      //  SceneManager.LoadScene(sceneName);
-
-      //  yield return FadeHelper.FadeOut(3f, Fade);
-   // }
 }
