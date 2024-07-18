@@ -4710,6 +4710,10 @@ PrefabInstance:
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7600345405095028731, guid: d4744de1ba001c94bb4f370f65e1c0ba, type: 3}
+      propertyPath: TimeLeft
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 7600345405095028731, guid: d4744de1ba001c94bb4f370f65e1c0ba, type: 3}
       propertyPath: TimerTxt
       value: 
       objectReference: {fileID: 2077786213}
