@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class ClickOnScreen : MonoBehaviour
 {
     public string sceneName;
+    public string toMenu;
 
     void Update()
     {
@@ -14,6 +15,10 @@ public class ClickOnScreen : MonoBehaviour
         {
             Debug.Log("Space");
             SceneManager.LoadScene(sceneName);
+        }
+        else if (Input.GetKey("escape"))
+        {
+            SceneManager.LoadScene(toMenu);
         }
     }
 }

@@ -5,25 +5,19 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: Assets/Scenes/DreamWorldTempl.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
-  - enabled: 0
-    path: Assets/Scenes/RealWorldLevel_1.unity
-    guid: 12b1eeae16a1e6f48bf1d6a25bcb7814
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/MainMenu.unity
     guid: 7c562cba8553e2a49b764e2979e33735
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Beginning.unity
     guid: 6296c47f75553554fbc253f297f877a8
   - enabled: 1
     path: Assets/Scenes/RealWorldDialogues_1.unity
     guid: 83c637622887d3e41993faeac1a4844e
-  - enabled: 0
-    path: Assets/Scenes/DreamWorldLevel_3.unity
-    guid: 81c828a93c698c044b902afe6a7fa49a
   - enabled: 1
     path: Assets/Scenes/DreamWorldLevel_2.unity
     guid: 6568bc2362767c04faee38bcfe8f4bd1
+  - enabled: 1
+    path: Assets/Scenes/DreamWorldLevel_3.unity
+    guid: 81c828a93c698c044b902afe6a7fa49a
   m_configObjects: {}

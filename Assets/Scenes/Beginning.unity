@@ -1589,6 +1589,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneName: RealWorldDialogues_1
   waitFor: 10
+--- !u!114 &1208412405
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1208412403}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b78845dd7727c2b4ba696582708bf9a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneName: DreamWorldLevel_2
 --- !u!1001 &1265752657
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4056,6 +4069,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 239848081985694351, guid: 37e5ad38282a1624097c56d544f81d5d, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1208412404}
+    - targetCorrespondingSourceObject: {fileID: 239848081985694351, guid: 37e5ad38282a1624097c56d544f81d5d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1208412405}
   m_SourcePrefab: {fileID: 100100000, guid: 37e5ad38282a1624097c56d544f81d5d, type: 3}
 --- !u!1001 &2174458954131989397
 PrefabInstance:
