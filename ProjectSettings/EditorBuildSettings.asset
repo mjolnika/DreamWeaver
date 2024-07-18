@@ -21,6 +21,6 @@ EditorBuildSettings:
     path: Assets/Scenes/RealWorldDialogues_1.unity
     guid: 83c637622887d3e41993faeac1a4844e
   - enabled: 1
-    path: Assets/Scenes/DreamWorldLevel_2.unity
+    path: Assets/Scenes/DreamWorldLevel_3.unity
     guid: 81c828a93c698c044b902afe6a7fa49a
   m_configObjects: {}
