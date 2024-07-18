@@ -897,7 +897,12 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &539372468 stripped
+--- !u!4 &539372469 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3503124484643845092, guid: 37e5ad38282a1624097c56d544f81d5d, type: 3}
+  m_PrefabInstance: {fileID: 1008359588906673578}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &539372470 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3222526651232793952, guid: 37e5ad38282a1624097c56d544f81d5d, type: 3}
   m_PrefabInstance: {fileID: 1008359588906673578}
@@ -908,11 +913,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b78845dd7727c2b4ba696582708bf9a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!4 &539372469 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3503124484643845092, guid: 37e5ad38282a1624097c56d544f81d5d, type: 3}
-  m_PrefabInstance: {fileID: 1008359588906673578}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &552817220
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4001,7 +4001,8 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1658039405341872864, guid: e237ae968dad59d4b86df08ff791d4ac, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -4193,7 +4194,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 539372468}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: LogicManager, Assembly-CSharp
         m_MethodName: restartGame
         m_Mode: 1
@@ -4330,6 +4331,10 @@ PrefabInstance:
     - target: {fileID: 239848081985694351, guid: 37e5ad38282a1624097c56d544f81d5d, type: 3}
       propertyPath: m_Layer
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3222526651232793952, guid: 37e5ad38282a1624097c56d544f81d5d, type: 3}
+      propertyPath: sceneName
+      value: RW2
       objectReference: {fileID: 0}
     - target: {fileID: 3222526651232793952, guid: 37e5ad38282a1624097c56d544f81d5d, type: 3}
       propertyPath: myRigidbody
@@ -4739,7 +4744,7 @@ PrefabInstance:
     - target: {fileID: 1764387118612371941, guid: 75d1137dcfcff2740b69bf013ce8d5b1, type: 3}
       propertyPath: logic
       value: 
-      objectReference: {fileID: 539372468}
+      objectReference: {fileID: 539372470}
     - target: {fileID: 1764387118612371941, guid: 75d1137dcfcff2740b69bf013ce8d5b1, type: 3}
       propertyPath: timer
       value: 

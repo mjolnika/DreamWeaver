@@ -759,6 +759,17 @@ Transform:
   - {fileID: 510487988}
   m_Father: {fileID: 387182268}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &494096286 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7883414930223326006, guid: 697315bfacf511844ae201b22fc8bbb8, type: 3}
+  m_PrefabInstance: {fileID: 1871905066}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19e7d9d50c72b7a45935ed5b78c36af0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &509684018 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2002074094937449928, guid: ef957da9bd07b3745874f9d0cb2f576a, type: 3}
@@ -1155,7 +1166,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f5176b16ebdb0947a8632351088438a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  puzzle: {fileID: 0}
+  puzzle: {fileID: 494096286}
   buttonTxt: {fileID: 780121483}
 --- !u!4 &923518929
 Transform:
@@ -1360,7 +1371,7 @@ PolygonCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -1601,7 +1612,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b78845dd7727c2b4ba696582708bf9a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName: DreamWorldLevel_2
+  sceneName: 
 --- !u!1001 &1265752657
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1616,7 +1627,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1152936597217309, guid: 88daa912ddf18f94585fbb6bb2d7a62e, type: 3}
       propertyPath: m_IsTrigger
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1152936597217309, guid: 88daa912ddf18f94585fbb6bb2d7a62e, type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.size
@@ -2325,7 +2336,7 @@ PrefabInstance:
     - target: {fileID: 3097907461601002201, guid: 88daa912ddf18f94585fbb6bb2d7a62e, type: 3}
       propertyPath: puzzle
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 494096286}
     - target: {fileID: 8380373061592963770, guid: 88daa912ddf18f94585fbb6bb2d7a62e, type: 3}
       propertyPath: m_Name
       value: Trigger (1)
@@ -3922,12 +3933,20 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 387182268}
     m_Modifications:
+    - target: {fileID: 724035929985088153, guid: e237ae968dad59d4b86df08ff791d4ac, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1654367407078515489, guid: e237ae968dad59d4b86df08ff791d4ac, type: 3}
       propertyPath: m_Name
       value: Finish
       objectReference: {fileID: 0}
     - target: {fileID: 1658039405341872864, guid: e237ae968dad59d4b86df08ff791d4ac, type: 3}
       propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1658039405341872864, guid: e237ae968dad59d4b86df08ff791d4ac, type: 3}
+      propertyPath: m_IsTrigger
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8034488557660103777, guid: e237ae968dad59d4b86df08ff791d4ac, type: 3}
@@ -3990,7 +4009,8 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1658039405341872864, guid: e237ae968dad59d4b86df08ff791d4ac, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -4417,7 +4437,7 @@ PrefabInstance:
     - target: {fileID: 1764387118612371941, guid: 75d1137dcfcff2740b69bf013ce8d5b1, type: 3}
       propertyPath: logic
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1208412405}
     - target: {fileID: 1764387118612371941, guid: 75d1137dcfcff2740b69bf013ce8d5b1, type: 3}
       propertyPath: timer
       value: 
