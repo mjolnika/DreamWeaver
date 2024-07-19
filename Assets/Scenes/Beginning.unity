@@ -890,7 +890,7 @@ Transform:
   m_GameObject: {fileID: 580530705}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -44.17, y: 14.99, z: 0}
+  m_LocalPosition: {x: -51.9, y: 14.2, z: 0}
   m_LocalScale: {x: 1.4153, y: 1.4153, z: 1.4153}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1454,7 +1454,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b78845dd7727c2b4ba696582708bf9a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName: Epi2
+  sceneName: RealWorldDialogues_1
 --- !u!1001 &1265752657
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4099,11 +4099,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3032884446054976501, guid: 75d1137dcfcff2740b69bf013ce8d5b1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -46.9
+      value: -51.7
       objectReference: {fileID: 0}
     - target: {fileID: 3032884446054976501, guid: 75d1137dcfcff2740b69bf013ce8d5b1, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 16.4
+      value: 16.3
       objectReference: {fileID: 0}
     - target: {fileID: 3032884446054976501, guid: 75d1137dcfcff2740b69bf013ce8d5b1, type: 3}
       propertyPath: m_LocalPosition.z
